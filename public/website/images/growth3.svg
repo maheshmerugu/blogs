@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="460" height="224" viewBox="0 0 460 224">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_397" data-name="Rectangle 397" width="460" height="224" rx="21" transform="translate(3.466 5.868)" fill="#ffc700"/>
+    </clipPath>
+  </defs>
+  <g id="Group_178078" data-name="Group 178078" transform="translate(-728.999 -11482.342)">
+    <g id="Mask_Group_13" data-name="Mask Group 13" transform="translate(725.533 11476.475)" clip-path="url(#clip-path)">
+      <rect id="Image_49" data-name="Image 49" width="482" height="272" transform="translate(3.467 -15.133)" fill="#f3c14d"/>
+    </g>
+    <g id="Group_39491" data-name="Group 39491" transform="translate(-594 9594.342)">
+      <g id="Group_39484" data-name="Group 39484" transform="translate(1864.885 213)" style="mix-blend-mode: normal;isolation: isolate">
+        <path id="Path_52499" data-name="Path 52499" d="M-393.674,1773.656l-6.237,13.313a3.746,3.746,0,0,1-4.388,1.994,43.339,43.339,0,0,0-11.2-1.463,43.552,43.552,0,0,0-43.358,39.973,3.785,3.785,0,0,1-3.748,3.527H-477.13a3.772,3.772,0,0,1-3.748-4.028A65.581,65.581,0,0,1-415.5,1765.5a65.26,65.26,0,0,1,19.514,2.964A3.769,3.769,0,0,1-393.674,1773.656Z" fill="#fefefe"/>
+        <path id="Path_52500" data-name="Path 52500" d="M-353.87,1831h-14.524a3.727,3.727,0,0,1-3.737-3.4,43.5,43.5,0,0,0-18.344-32.165,3.746,3.746,0,0,1-1.278-4.648l6.229-13.309a3.74,3.74,0,0,1,5.388-1.6,65.556,65.556,0,0,1,30.02,51.188A3.742,3.742,0,0,1-353.87,1831Z" fill="#fefefe" opacity="0.5"/>
+      </g>
+      <text id="_25_000_" data-name="$25,000+" transform="translate(1397 2088)" font-size="24" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">$25,000+</tspan></text>
+      <circle id="Ellipse_18881" data-name="Ellipse 18881" cx="3.5" cy="3.5" r="3.5" transform="translate(1484 1916)" fill="#fff"/>
+      <text id="Pay_Us" data-name="Pay Us" transform="translate(1496 1941)" font-size="11" font-family="LotaGrotesque-Light, Lota Grotesque" font-weight="300" opacity="0.5"><tspan x="0" y="0">Pay Us</tspan></text>
+      <text id="Turn_per_day" data-name="Turn per day" transform="translate(1366 1941)" font-size="11" font-family="LotaGrotesque-Light, Lota Grotesque" font-weight="300" opacity="0.5"><tspan x="0" y="0">Turn per day</tspan></text>
+      <text id="_5.00" data-name="$5.00" transform="translate(1496 1926)" font-size="15" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">$5.00</tspan></text>
+      <text id="_5.000_" data-name="$5.000+" transform="translate(1366 1926)" font-size="15" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">$5.000+</tspan></text>
+    </g>
+    <text id="Statical_Report" data-name="Statical Report" transform="translate(960 11585.342)" fill="#fff" font-size="26" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">Statical Report</tspan></text>
+    <text id="In_publishing_and_graphic_ipsum_is_a_placeholder_text" data-name="In publishing and graphic 
+ipsum is a placeholder text" transform="translate(960 11615.342)" fill="#fff" font-size="16" font-family="LotaGrotesque-Regular, Lota Grotesque"><tspan x="0" y="0">In publishing and graphic </tspan><tspan x="0" y="29">ipsum is a placeholder text</tspan></text>
+  </g>
+</svg>

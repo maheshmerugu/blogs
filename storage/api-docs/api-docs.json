@@ -1,0 +1,2782 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Auricle API",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://auricle.co.in/auricle2.0/",
+            "description": "L5 Swagger OpenApi Server"
+        }
+    ],
+    "paths": {
+        "/api/bookmarks-datas-list": {
+            "get": {
+                "tags": [
+                    "Bookmark data on profile page"
+                ],
+                "summary": "Bookmark List",
+                "description": "1=> News, 2=>Video,3=>Question bank",
+                "operationId": "bookmarkDatas",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Enter type",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/get-qb-bookmark-module": {
+            "get": {
+                "tags": [
+                    "Bookmark data on profile page"
+                ],
+                "summary": "Bookmark List",
+                "operationId": "getQBBookmarkModule",
+                "parameters": [
+                    {
+                        "name": "subject_id",
+                        "in": "query",
+                        "description": "Enter subject id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/get-bookmark-question": {
+            "get": {
+                "tags": [
+                    "Bookmark data on profile page"
+                ],
+                "summary": "Bookmark List",
+                "operationId": "bookmarkQuestions",
+                "parameters": [
+                    {
+                        "name": "module_id",
+                        "in": "query",
+                        "description": "Enter module id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/notes-bookmarks-list": {
+            "get": {
+                "tags": [
+                    "Bookmark data on profile page"
+                ],
+                "summary": "Bookmark list of notes",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "notesBookmarkList",
+                "parameters": [
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/streak-count": {
+            "post": {
+                "tags": [
+                    "Home Screen"
+                ],
+                "summary": "Streak Count",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "streakCount",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-watch-hour-list": {
+            "get": {
+                "tags": [
+                    "Bookmark data on profile page"
+                ],
+                "summary": "Video watch hour list",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "videoWatchHourList",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/faq-lists": {
+            "get": {
+                "tags": [
+                    "CMS"
+                ],
+                "summary": "FAQ",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "faqList",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/cms-lists": {
+            "get": {
+                "tags": [
+                    "CMS"
+                ],
+                "summary": "CMS ",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "cmsList",
+                "parameters": [
+                    {
+                        "name": "cms_id",
+                        "in": "query",
+                        "description": "Enter cms id (2=>Privacy Policy,3=>About US,4=>Terms & Conditions)",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "2"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/contact-us": {
+            "post": {
+                "tags": [
+                    "CMS"
+                ],
+                "summary": "Contact us",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "contactUs",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Enter Title",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "Hello world!"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "Enter description",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "This is description"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/missed-mcq": {
+            "get": {
+                "tags": [
+                    "Mcq Screen"
+                ],
+                "summary": "Missed Mcq Data",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "missedMcq",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/attempt-mcq": {
+            "post": {
+                "tags": [
+                    "Mcq Screen"
+                ],
+                "summary": "Attempt Mcq Test",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "attemptMcq",
+                "parameters": [
+                    {
+                        "name": "option_id",
+                        "in": "query",
+                        "description": "Enter option ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "mcq_id",
+                        "in": "query",
+                        "description": "Enter mcq id ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/home": {
+            "get": {
+                "tags": [
+                    "Home Screen"
+                ],
+                "summary": "Home Screen Data",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "home",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/news-list": {
+            "get": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "All News",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "newsList",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "array of type numbers",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search Subject",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/news-view": {
+            "post": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "View News",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "newsView",
+                "parameters": [
+                    {
+                        "name": "news_id",
+                        "in": "query",
+                        "description": "Enter news id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/news-bookmark": {
+            "post": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "Bookmark News",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "newsBookmark",
+                "parameters": [
+                    {
+                        "name": "news_id",
+                        "in": "query",
+                        "description": "Enter news id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/plan-lists": {
+            "get": {
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Subscription Data",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "planList",
+                "parameters": [
+                    {
+                        "name": "plan_type",
+                        "in": "query",
+                        "description": "Select type notes or video 1=>Video,2=>Notes",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/order-generate": {
+            "post": {
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Generate order id",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "orderGenerate",
+                "parameters": [
+                    {
+                        "name": "plan_id",
+                        "in": "query",
+                        "description": "Enter plan id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/subscribe-plan": {
+            "post": {
+                "tags": [
+                    "Subscription"
+                ],
+                "summary": "Which plan user want to subscribe for(Notes or Video)",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "subscribePlan",
+                "parameters": [
+                    {
+                        "name": "plan_id",
+                        "in": "query",
+                        "description": "Enter plan id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "description": "Enter order id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "subcription_for",
+                        "in": "query",
+                        "description": "Select for notes or video (1=>Video,2=>Notes )",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/select-question-bank": {
+            "get": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Select Custom QB",
+                "description": "0=>User not attempted any question,1=>countinue,2=>User result",
+                "operationId": "selectQuestionBank",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/select-year-level-type": {
+            "post": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Select year, difficulty level and select custom or original question bank",
+                "description": "1=> Custom, 2=>Original",
+                "operationId": "selectYearLevelType",
+                "parameters": [
+                    {
+                        "name": "question_bank_type",
+                        "in": "query",
+                        "description": "array of type numbers",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "in": "query",
+                        "description": "Enter year",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "difficulty_level",
+                        "in": "query",
+                        "description": "Enter difficulty level ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "question_type[]",
+                        "in": "query",
+                        "description": "('attempted','unattempted','incorrect')",
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/select-subject": {
+            "get": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Subject wise module list",
+                "description": "Subject wise module list",
+                "operationId": "selecSubject",
+                "parameters": [
+                    {
+                        "name": "subject_id[]",
+                        "in": "query",
+                        "description": "A list of things.",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    {
+                        "name": "question_type[]",
+                        "in": "query",
+                        "description": "('attempted','unattempted','incorrect')",
+                        "required": false,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/select-module": {
+            "get": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Module wise topic list",
+                "description": "Subject wise module list",
+                "operationId": "selecModule",
+                "parameters": [
+                    {
+                        "name": "module_id[]",
+                        "in": "query",
+                        "description": "A list of things.",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/create-custom-qb": {
+            "post": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Create custom question bank",
+                "description": "Create custom question bank",
+                "operationId": "createCustomQb",
+                "parameters": [
+                    {
+                        "name": "topic[]",
+                        "in": "query",
+                        "description": "A list of things.",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    {
+                        "name": "difficulty_level",
+                        "in": "query",
+                        "description": "Enter difficuty level",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/custom-questions-list": {
+            "get": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Custom question bank list ",
+                "description": "Custom question bank list",
+                "operationId": "customQuestionList",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/questions-attempt": {
+            "post": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Attempt Custom  Test",
+                "description": "Attempt custom question bank",
+                "operationId": "questionAttempt",
+                "parameters": [
+                    {
+                        "name": "qb_id",
+                        "in": "query",
+                        "description": "Enter qb id ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "option_id",
+                        "in": "query",
+                        "description": "Enter option ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "qb_type",
+                        "in": "query",
+                        "description": "1=>Custom QB,2=>Original QB",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "attempt_time",
+                        "in": "query",
+                        "description": "Question attemption time",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/questions-unattempt": {
+            "post": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "UnAttempt Custom  Test",
+                "description": "UnAttempt custom question bank",
+                "operationId": "questionUnAttempt",
+                "parameters": [
+                    {
+                        "name": "qb_id",
+                        "in": "query",
+                        "description": "Enter qb id ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "qb_type",
+                        "in": "query",
+                        "description": "1=>Custom QB,2=>Original QB",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "attempt_time",
+                        "in": "query",
+                        "description": "Question attemption time",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/select-subject-original-qb": {
+            "get": {
+                "tags": [
+                    "Question Bank"
+                ],
+                "summary": "Question bank",
+                "description": "Question bank",
+                "operationId": "selectSubjectForOriginQB",
+                "parameters": [
+                    {
+                        "name": "subject_id",
+                        "in": "query",
+                        "description": "Enter subject id.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/topic-question-count": {
+            "get": {
+                "tags": [
+                    "Question Bank"
+                ],
+                "summary": "Question bank",
+                "description": "Question bank",
+                "operationId": "moduleQuestionCount",
+                "parameters": [
+                    {
+                        "name": "topic_id",
+                        "in": "query",
+                        "description": "Enter topic id.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/original-qb-list": {
+            "get": {
+                "tags": [
+                    "Question Bank"
+                ],
+                "summary": "Question bank",
+                "description": "Question bank",
+                "operationId": "originalQbQuestionList",
+                "parameters": [
+                    {
+                        "name": "topic_id",
+                        "in": "query",
+                        "description": "Enter topic id.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/qb-bookmark": {
+            "post": {
+                "tags": [
+                    "Question Bank"
+                ],
+                "summary": "Question bank",
+                "description": "Bookmark Question Bank",
+                "operationId": " ",
+                "parameters": [
+                    {
+                        "name": "qb_id",
+                        "in": "query",
+                        "description": "Enter question bank id.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/original-qb-result": {
+            "get": {
+                "tags": [
+                    "Question Bank"
+                ],
+                "summary": "Question bank",
+                "description": "Question bank",
+                "operationId": "result",
+                "parameters": [
+                    {
+                        "name": "topic_id",
+                        "in": "query",
+                        "description": "Enter topic id.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/result-custom-question-bank": {
+            "get": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Custom Question bank",
+                "description": "Custom Question bank",
+                "operationId": "customQuestionBankResult",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/discard-custom-question-bank": {
+            "delete": {
+                "tags": [
+                    "Custom Question Bank"
+                ],
+                "summary": "Custom Question bank",
+                "description": "Custom Question bank",
+                "operationId": "discardCustomQuestionBank",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/discard-question-bank": {
+            "delete": {
+                "tags": [
+                    "Question Bank"
+                ],
+                "summary": "Question bank",
+                "description": "Question bank",
+                "operationId": "discardQuestionBank",
+                "parameters": [
+                    {
+                        "name": "topic_id",
+                        "in": "query",
+                        "description": "Enter topic id.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/set-reminder": {
+            "post": {
+                "tags": [
+                    "Reminder"
+                ],
+                "summary": "Set Reminder",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "setReminder",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Enter title",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "reminder name"
+                        }
+                    },
+                    {
+                        "name": "datetime",
+                        "in": "query",
+                        "description": "Enter date",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "12-19-2019 12:30:00"
+                        }
+                    },
+                    {
+                        "name": "notify_me",
+                        "in": "query",
+                        "description": "Enter time",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "1234"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/edit-reminder": {
+            "post": {
+                "tags": [
+                    "Reminder"
+                ],
+                "summary": "Edit Reminder",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "editReminder",
+                "parameters": [
+                    {
+                        "name": "reminder_id",
+                        "in": "query",
+                        "description": "Enter reminder id which you want to update",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Enter title",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "reminder name"
+                        }
+                    },
+                    {
+                        "name": "datetime",
+                        "in": "query",
+                        "description": "Enter date",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "12-19-2019 12:30:00"
+                        }
+                    },
+                    {
+                        "name": "notify_me",
+                        "in": "query",
+                        "description": "Enter time",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "1234"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/delete-reminder": {
+            "delete": {
+                "tags": [
+                    "Reminder"
+                ],
+                "summary": "Delete Reminder",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "deleteReminder",
+                "parameters": [
+                    {
+                        "name": "reminder_id",
+                        "in": "query",
+                        "description": "Enter reminder id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/list-reminder": {
+            "get": {
+                "tags": [
+                    "Reminder"
+                ],
+                "summary": "List reminder",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "listReminder",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/status-push-notification": {
+            "post": {
+                "tags": [
+                    "Reminder"
+                ],
+                "summary": "Update push notification status",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "statusPushNotification",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/notification": {
+            "get": {
+                "tags": [
+                    "Reminder"
+                ],
+                "summary": "Notification list",
+                "description": "Notification lists",
+                "operationId": "notification",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/schedule-class/get-subjects": {
+            "get": {
+                "tags": [
+                    "Schedule Classes"
+                ],
+                "summary": "Schedule Classes",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getSubjectForClasses",
+                "parameters": [
+                    {
+                        "name": "year_id",
+                        "in": "query",
+                        "description": "Enter year id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search Subject",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/ongoing-previous-events": {
+            "get": {
+                "tags": [
+                    "Schedule Classes"
+                ],
+                "summary": "Schedule Classes",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "ongoingPrevious",
+                "parameters": [
+                    {
+                        "name": "subject_id",
+                        "in": "query",
+                        "description": "Enter subject id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "4"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search Video Title",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/date-filter-events": {
+            "get": {
+                "tags": [
+                    "Schedule Classes"
+                ],
+                "summary": "Schedule Classes",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "dateFilterEvents",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Enter date",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "2023-03-20"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sign-up": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Signup",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "sign_up",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Enter user name",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "Venkatesh"
+                        }
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "description": "Enter user mobile number",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "9705400836"
+                        }
+                    },
+                    {
+                        "name": "college_id",
+                        "in": "query",
+                        "description": "Enter college id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "year_id",
+                        "in": "query",
+                        "description": "Enter year",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "2022"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter user email",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "venkatesh.auricle@gmail.com"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "Enter password",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "123456"
+                        }
+                    },
+                    {
+                        "name": "device_id",
+                        "in": "query",
+                        "description": "Enter device id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "device_type",
+                        "in": "query",
+                        "description": "Enter device type",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "fcm_token",
+                        "in": "query",
+                        "description": "Enter fcm token",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/verify-otp": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Verify",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "verifyOtp",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter user email",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "venkatesh.auricle@gmail.com"
+                        }
+                    },
+                    {
+                        "name": "otp",
+                        "in": "query",
+                        "description": "Enter otp",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1234"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/verify-sign-up": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Signup  Verify",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "verifySignUp",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter user email",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "venkatesh.auricle@gmail.com"
+                        }
+                    },
+                    {
+                        "name": "email_otp",
+                        "in": "query",
+                        "description": "Enter email otp",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1234"
+                        }
+                    },
+                    {
+                        "name": "mobile_number",
+                        "in": "query",
+                        "description": "Enter user mobile number",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "919705400836"
+                        }
+                    },
+                    {
+                        "name": "mobile_otp",
+                        "in": "query",
+                        "description": "Enter mobile otp",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1234"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/resend-otp": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Resend Otp",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "resendOtp",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter user email",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "venkatesh.auricle@gmail.com"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/forgot-password": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Forgot Password",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "forgotPassword",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter email ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Login",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter email or mobile",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "venkatesh.auricle@gmail.com"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "Enter password",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "123456"
+                        }
+                    },
+                    {
+                        "name": "device_id",
+                        "in": "query",
+                        "description": "Enter device id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "1234"
+                        }
+                    },
+                    {
+                        "name": "device_type",
+                        "in": "query",
+                        "description": "Enter device type",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "android"
+                        }
+                    },
+                    {
+                        "name": "fcm_token",
+                        "in": "query",
+                        "description": "Enter fcm token",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/college-list": {
+            "get": {
+                "tags": [
+                    "College Management"
+                ],
+                "summary": "College management data",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "collegeList",
+                "parameters": [
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search College",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "BBD"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/year-list": {
+            "get": {
+                "tags": [
+                    "College Management"
+                ],
+                "summary": "College management ",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "yearList",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/reset-password": {
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Reset Password",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "resetPassword",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Enter email ",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "venkatesh.auricle@gmail.com"
+                        }
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "description": "Enter mobile number",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "Enter password",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/api/update-profile": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Signup",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "updateProfile",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Enter user name",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "Venkatesh"
+                        }
+                    },
+                    {
+                        "name": "college_id",
+                        "in": "query",
+                        "description": "Enter college id",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "year_id",
+                        "in": "query",
+                        "description": "Enter year",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "2"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": false,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "profile_img": {
+                                        "description": "Image to upload",
+                                        "type": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/logout": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Logout ",
+                "description": "User logout",
+                "operationId": "logout",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/change-password": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User change password ",
+                "description": "User change password",
+                "operationId": "changePassword",
+                "parameters": [
+                    {
+                        "name": "oldpassword",
+                        "in": "query",
+                        "description": "Enter old password",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "123456"
+                        }
+                    },
+                    {
+                        "name": "new_password",
+                        "in": "query",
+                        "description": "Enter new password",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "123456"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/delete-account": {
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Delete ",
+                "description": "User Delete",
+                "operationId": "deleteAccount",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/get-subjects": {
+            "get": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "All Subjects",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getSubject",
+                "parameters": [
+                    {
+                        "name": "video_type",
+                        "in": "query",
+                        "description": "array of type numbers 1=>theory 2=>labs",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "enum",
+                                "enum": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "name": "year_id",
+                        "in": "query",
+                        "description": "Enter year id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search Subject",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "anatomy"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/get-teachers": {
+            "get": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Teachers List",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getTeachers",
+                "parameters": [
+                    {
+                        "name": "year_id",
+                        "in": "query",
+                        "description": "Enter Year id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "subject_id",
+                        "in": "query",
+                        "description": "Enter Subject id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Search teacher",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "batra"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/get-topics": {
+            "get": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Topic List",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getTopics",
+                "parameters": [
+                    {
+                        "name": "year_id",
+                        "in": "query",
+                        "description": "Enter Year id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "video_status",
+                        "in": "query",
+                        "description": "Enter video status ( 0=>All 1=>paused 2=>completed 3=>not started)",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "subject_id",
+                        "in": "query",
+                        "description": "Enter Subject id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "teacher_id",
+                        "in": "query",
+                        "description": "Enter teacher id",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/get-video-detail": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Video Details",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "getVideoDetail",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/verify-otp-video": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Verified video otp and playbackinfo",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "verifyOtpvideo",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-bookmark": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Video Bookmark",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "videoBookmark",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-rating": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Video Details",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "VideoRating",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "in": "query",
+                        "description": "Enter video rating",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "5"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "in": "query",
+                        "description": "Write review here..",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "Very Good!"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-hand-writting-notes": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Video Details",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "HandWrittingNotes",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "video_time",
+                        "in": "query",
+                        "description": "Enter Video Time",
+                        "required": false,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "1:30"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "in": "query",
+                        "description": "Type some thing here.",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "This is the notes."
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/edit-video-hand-writting-notes": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Video Details",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "EditHandWrittingNotes",
+                "parameters": [
+                    {
+                        "name": "note_id",
+                        "in": "query",
+                        "description": "Enter Note id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "in": "query",
+                        "description": "Type some thing here.",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "This is the notes."
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-play-status": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Video Details",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "videoPlayStatus",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "watch_time",
+                        "in": "query",
+                        "description": "Enter watch time(in second:).",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "3"
+                        }
+                    },
+                    {
+                        "name": "is_progress_video",
+                        "in": "query",
+                        "description": "Enter progress time(in second:).",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-download": {
+            "post": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Download Video",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "videoDownload",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/video-download-list": {
+            "get": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Download Video",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "videoDownloadList",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/countinue-video-list": {
+            "get": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Countinue Video",
+                "description": "Multiple status values can be provided with comma separated string",
+                "operationId": "CountinueVideoList",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/delete-downloaded-video": {
+            "delete": {
+                "tags": [
+                    "Videos"
+                ],
+                "summary": "Delete downloaded videos",
+                "description": "Delete downloaded videos",
+                "operationId": "deleteDownloadedvideo",
+                "parameters": [
+                    {
+                        "name": "video_id",
+                        "in": "query",
+                        "description": "Enter Video id",
+                        "required": true,
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "responses": {
+            "200": {
+                "description": "successful operation"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}

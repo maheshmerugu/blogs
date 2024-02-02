@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="460" height="224" viewBox="0 0 460 224">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_395" data-name="Rectangle 395" width="460" height="224" rx="21" transform="translate(3.466 5.868)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_178077" data-name="Group 178077" transform="translate(-143.999 -11482.342)">
+    <g id="Mask_Group_29" data-name="Mask Group 29" transform="translate(140.533 11476.475)" clip-path="url(#clip-path)">
+      <rect id="Image_46" data-name="Image 46" width="460" height="315.504" transform="translate(3.466 5.867)" fill="#f57474"/>
+    </g>
+    <text id="Statical_Report" data-name="Statical Report" transform="translate(185 11585.342)" fill="#fff" font-size="26" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">Statical Report</tspan></text>
+    <g id="Group_39480" data-name="Group 39480" transform="translate(432.998 11501.9)">
+      <path id="Path_52495" data-name="Path 52495" d="M127.245,1649.581l7.451-23.23a33.612,33.612,0,0,1-12.3-6.328l-15.273,19A58.014,58.014,0,0,0,127.245,1649.581Z" transform="translate(-76.788 -1535.805)" fill="#0092ff" style="mix-blend-mode: normal;isolation: isolate"/>
+      <path id="Path_52496" data-name="Path 52496" d="M145.695,1571.9v-24.386a58.154,58.154,0,0,0-55.415,42.728l23.487,6.545A33.731,33.731,0,0,1,145.695,1571.9Z" transform="translate(-79.504 -1547.498)" fill="#f8d79f" style="mix-blend-mode: normal;isolation: isolate"/>
+      <path id="Path_52497" data-name="Path 52497" d="M140.765,1547.5c-.2,0-.387.013-.581.015V1571.9c.194,0,.386-.015.581-.015a33.676,33.676,0,1,1-8.864,66.16l-7.451,23.23A58.058,58.058,0,1,0,140.765,1547.5Z" transform="translate(-73.994 -1547.5)" fill="#4752de" style="mix-blend-mode: normal;isolation: isolate"/>
+      <g id="Group_39479" data-name="Group 39479" transform="translate(0 36.8)" style="mix-blend-mode: normal;isolation: isolate">
+        <path id="Path_52498" data-name="Path 52498" d="M114.1,1600.452a33.484,33.484,0,0,1,2.415-12.53L84.53,1579.19a65.595,65.595,0,0,0,22.354,73.437l20.461-25.408A33.561,33.561,0,0,1,114.1,1600.452Z" transform="translate(-81 -1579.19)" fill="#c53164"/>
+      </g>
+    </g>
+    <g id="Group_39481" data-name="Group 39481" transform="translate(199.277 11649.487)">
+      <text id="Spend_Time" data-name="Spend Time" transform="translate(15.223 31.854)" fill="#fff" font-size="12" font-family="LotaGrotesque-Light, Lota Grotesque" font-weight="300" opacity="0.5"><tspan x="0" y="0">Spend Time</tspan></text>
+      <text id="Back_links" data-name="Back links" transform="translate(119.223 31.854)" fill="#fff" font-size="12" font-family="LotaGrotesque-Light, Lota Grotesque" font-weight="300" opacity="0.5"><tspan x="0" y="0">Back links</tspan></text>
+      <text id="Clicks" transform="translate(217.223 31.854)" fill="#fff" font-size="12" font-family="LotaGrotesque-Light, Lota Grotesque" font-weight="300" opacity="0.5"><tspan x="0" y="0">Clicks</tspan></text>
+      <text id="Active_User" data-name="Active User" transform="translate(297.223 31.854)" fill="#fff" font-size="12" font-family="LotaGrotesque-Light, Lota Grotesque" font-weight="300" opacity="0.5"><tspan x="0" y="0">Active User</tspan></text>
+      <text id="_22_" data-name="22%" transform="translate(15.223 14.854)" fill="#fff" font-size="16" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">22%</tspan></text>
+      <text id="_58_" data-name="58%" transform="translate(119.223 14.854)" fill="#fff" font-size="16" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">58%</tspan></text>
+      <text id="_05_" data-name="05%" transform="translate(217.223 14.854)" fill="#fff" font-size="16" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">05%</tspan></text>
+      <text id="_15_" data-name="15%" transform="translate(297.223 14.854)" fill="#fff" font-size="16" font-family="LotaGrotesque-Bold, Lota Grotesque" font-weight="700"><tspan x="0" y="0">15%</tspan></text>
+      <circle id="Ellipse_18877" data-name="Ellipse 18877" cx="3" cy="3" r="3" transform="translate(0.223 6.855)" fill="#fea100"/>
+      <ellipse id="Ellipse_18878" data-name="Ellipse 18878" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(104.223 6.855)" fill="#1a26b7"/>
+      <ellipse id="Ellipse_18879" data-name="Ellipse 18879" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(201.223 6.855)" fill="#0092ff"/>
+      <circle id="Ellipse_18880" data-name="Ellipse 18880" cx="3" cy="3" r="3" transform="translate(282.223 6.855)" fill="#0092ff"/>
+    </g>
+  </g>
+</svg>

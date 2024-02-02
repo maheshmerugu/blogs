@@ -1,0 +1,10 @@
+id,qb_question,year,subject,module,topic,qb_answer,reference,qb_explanation,difficulty_level,optoin1,option2,optoin3,option4
+1,auricle 1,1,Anatomy,Head and Neck,Triangles of Neck,Auricle1,Test1,Test1.1,Beginner,Auricle1,Auricle2,Auricle3,Auricle4
+2,auricle 2,1,Anatomy,Head and Neck,Anterior Triangle,Auricle2.1,Test2,Test2.1,Beginner,Auricle2,Auricle2.1,Auricle2.3,Auricle2.4.
+3,auricle 3,1,Anatomy,Head and Neck,Scalp,Auricle3.1,Test3,Test3.1,Beginner,Auricle3,Auricle3.1,Auricle3.3,Auricle3.4
+4,auricle 1,1,Anatomy,Head and Neck,Triangles of Neck,Auricle1,Test1,Test1.1,Intermediate,Auricle1,Auricle2,Auricle3,Auricle4
+5,auricle 2,1,Anatomy,Head and Neck,Anterior Triangle,Auricle2.1,Test2,Test2.1,Intermediate,Auricle2,Auricle2.1,Auricle2.3,Auricle2.4.
+6,auricle 3,1,Anatomy,Head and Neck,Scalp,Auricle3.1,Test3,Test3.1,Intermediate,Auricle3,Auricle3.1,Auricle3.3,Auricle3.4
+7,auricle 1,1,Anatomy,Head and Neck,Triangles of Neck,Auricle1,Test1,Test1.1,Expert,Auricle1,Auricle2,Auricle3,Auricle4
+8,auricle 2,1,Anatomy,Head and Neck,Anterior Triangle,Auricle2.1,Test2,Test2.1,Expert,Auricle2,Auricle2.1,Auricle2.3,Auricle2.4.
+9,auricle 3,1,Anatomy,Head and Neck,Scalp,Auricle3.1,Test3,Test3.1,Expert,Auricle3,Auricle3.1,Auricle3.3,Auricle3.4
