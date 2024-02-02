@@ -1,0 +1,26 @@
+<svg id="Group_160912" data-name="Group 160912" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.174" height="30.207" viewBox="0 0 29.174 30.207">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_52377" data-name="Path 52377" d="M9.865-12.206a1.079,1.079,0,0,1,1.04,1.112A1.078,1.078,0,0,1,9.865-9.98a1.079,1.079,0,0,1-1.041-1.113A1.079,1.079,0,0,1,9.865-12.206ZM8.083-8.8H5.906s-.766-.438-.867-.531a.388.388,0,0,1-.048-.361H9.213a.9.9,0,0,1,.912,1.1H12.5l-.058.311c-.03.146-.023.21-.151.292a1.765,1.765,0,0,1-.819.306c-.416,0-3.711.011-3.711.011l.5-1.349s-.055-.036-.1.05ZM7.635-7.306l.012-.033H9.774l-.192.755a24.829,24.829,0,0,0,1.169,3c.134.051.753.258,1.054.378.2.08.167.086.174.309,0,.133.009.274.009.274H9.95l-1.4-3.107c.073-.2.337-.467.195-.391-.364.084-.613,1.182-.66,1.182H5.776A7.158,7.158,0,0,1,5.51-3.9c-.026.05-.045.042-.092.044-.137,0-.4.016-.4.016V-6.085H7.238Z" transform="translate(-4.966 12.206)" fill="#b50303" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_52376" data-name="Path 52376" d="M-206,588.069H249.851V-399H-206Z" transform="translate(206 399)" fill="#b50303"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_52380" data-name="Path 52380" d="M16.549-14.631,29.892-.369l-.925.99L15.624-13.638ZM2.384-2.075,15.342-15.923l.924.991L3.31-1.083Zm11.68,15.069L.718-1.268l.932-.993L14.991,12ZM28.228.437,15.274,14.283l-.93-.991L27.3-.555Z" transform="translate(-0.718 15.923)" fill="#b50303" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Path_52379" data-name="Path 52379" d="M-206,1147.051H508V-399H-206Z" transform="translate(206 399)" fill="#b50303"/>
+    </clipPath>
+  </defs>
+  <g id="Group_160399" data-name="Group 160399" transform="translate(10.076 9.607)" clip-path="url(#clip-path)">
+    <g id="Group_160398" data-name="Group 160398" transform="translate(-256.451 -470.188)" clip-path="url(#clip-path-2)">
+      <path id="Path_52375" data-name="Path 52375" d="M3.943-13.206h9.994V-1.19H3.943Z" transform="translate(251.264 482.178)" fill="#b50303"/>
+    </g>
+  </g>
+  <g id="Group_160401" data-name="Group 160401" transform="translate(0 0)" clip-path="url(#clip-path-3)">
+    <g id="Group_160400" data-name="Group 160400" transform="translate(-393.591 -729.38)" clip-path="url(#clip-path-4)">
+      <path id="Path_52378" data-name="Path 52378" d="M-.282-16.923H32.623V17.091H-.282Z" transform="translate(391.969 744.399)" fill="#b50303"/>
+    </g>
+  </g>
+</svg>

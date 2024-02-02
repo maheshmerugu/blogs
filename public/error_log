@@ -1,0 +1,2 @@
+[14-Jun-2023 12:32:40 UTC] PHP Notice:  Undefined variable: request in /home/e42hkfu2q4wn/public_html/auricle2.0/public/test.php on line 10
+[14-Jun-2023 12:32:40 UTC] PHP Notice:  Trying to get property 'email' of non-object in /home/e42hkfu2q4wn/public_html/auricle2.0/public/test.php on line 10

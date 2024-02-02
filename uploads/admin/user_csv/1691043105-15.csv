@@ -1,0 +1,7 @@
+id,qb_question,year,subject,module,topic,qb_answer,reference,qb_explanation,difficulty_level,optoin1,option2,optoin3,option4
+1,auricle 1,1,Anatomy,Head and Neck,Triangles of Neck,Auricle1,Test1,Test3.3,Beginner,a,b,c,d
+2,Auricle 2,1,Anatomy,Head and Neck,Triangles of Neck,Auricle2,Test2,Test3.3,intermediate,a,b,c,d
+3,Auricle 3,1,Anatomy,Head and Neck,Triangles of Neck,Auricle3,Test3,Test3.3,Expert,a,b,c,d
+4,Auricle 4,1,Anatomy,Head and Neck,Triangles of Neck,Auricle4,Test4,Test3.3,interme,a,b,c,d
+5,Auricle 5,1,Anatomy,Head and Neck,Triangles of Neck,Auricle4,Test4,Test3.3,Expert,a,b,c,d
+6,Auricle 5,1,Anatomy,Head and Neck,Triangles of Neck,Auricle4,Test4,Test3.3,Beginner,a,b,c,d

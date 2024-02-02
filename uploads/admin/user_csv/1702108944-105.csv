@@ -1,0 +1,9 @@
+id,qb_question,year,subject,module,topic,qb_answer,reference,qb_explanation,difficulty_level,optoin1,option2,optoin3,option4
+1,"In a patient with a traumatic injury to the right side of the neck resulting in severe bleeding from the external carotid artery, which vessel is most likely to be damaged?",1,Anatomy,Head and Neck,Blood supply,Superficial temporal artery,,The superficial temporal artery is a branch of the external carotid artery and is susceptible to injury in traumatic situations.,Beginner,Facial artery,Maxillary artery,Superficial temporal artery,Occipital artery
+2,Question 2,2,Anatomy,Head and Neck,Blood supply,Edema,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1
+3,Question 3,3,Anatomy,Head and Neck,Blood supply,Test3,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1
+4,Question 4,4,Anatomy,Head and Neck,Blood supply,Beginner,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1
+5,Question 5,1,Anatomy,Head and Neck,Blood supply,Test3,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1
+6,Question 6,2,Anatomy,Head and Neck,Blood supply,Beginner,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1
+7,Question 7,3,Anatomy,Head and Neck,Blood supply,Edema,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1
+8,Question 8,4,Anatomy,Head and Neck,Blood supply,Intermediate,Topic,Test,Beginner,Test3,Edema,Intermediate,Test1

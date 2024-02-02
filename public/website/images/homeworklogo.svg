@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.008" height="33.008" viewBox="0 0 33.008 33.008">
+  <g id="Group_160800" data-name="Group 160800" transform="translate(-282.091 -451.694)">
+    <circle id="Ellipse_56" data-name="Ellipse 56" cx="4.155" cy="4.155" r="4.155" transform="translate(294.44 454.694)" fill="#c2e4f8"/>
+    <circle id="Ellipse_57" data-name="Ellipse 57" cx="4.155" cy="4.155" r="4.155" transform="translate(285.091 473.392)" fill="#c2e4f8"/>
+    <circle id="Ellipse_58" data-name="Ellipse 58" cx="4.155" cy="4.155" r="4.155" transform="translate(303.789 473.392)" fill="#c2e4f8"/>
+    <path id="Path_52619" data-name="Path 52619" d="M301.785,457.149a11.444,11.444,0,0,1,6.7,13.812m-4.939,6.5a11.437,11.437,0,0,1-12.056,0m-4.862-6.232a11.442,11.442,0,0,1,6.912-14.2" transform="translate(1.078 2.523)" fill="none" stroke="#c40000" stroke-width="3"/>
+    <g id="Ellipse_59" data-name="Ellipse 59" transform="translate(294.44 454.694)" fill="#fff" stroke="#c40000" stroke-width="3">
+      <circle cx="4.155" cy="4.155" r="4.155" stroke="none"/>
+      <circle cx="4.155" cy="4.155" r="5.655" fill="none"/>
+    </g>
+    <g id="Ellipse_60" data-name="Ellipse 60" transform="translate(285.091 473.392)" fill="#fff" stroke="#c40000" stroke-width="3">
+      <circle cx="4.155" cy="4.155" r="4.155" stroke="none"/>
+      <circle cx="4.155" cy="4.155" r="5.655" fill="none"/>
+    </g>
+    <g id="Ellipse_61" data-name="Ellipse 61" transform="translate(303.789 473.392)" fill="#efa902" stroke="#c40000" stroke-width="3">
+      <circle cx="4.155" cy="4.155" r="4.155" stroke="none"/>
+      <circle cx="4.155" cy="4.155" r="5.655" fill="none"/>
+    </g>
+  </g>
+</svg>
