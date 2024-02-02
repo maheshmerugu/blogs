@@ -26,6 +26,7 @@ return view('welcome');
 
 Route::prefix('/admin')->group(base_path('routes/admin_route.php'));
 
+Route::get('/', [UserController::class, 'user']);
 
 
 Route::get('/delete-user', [UserController::class, 'deleteUserContent']);
