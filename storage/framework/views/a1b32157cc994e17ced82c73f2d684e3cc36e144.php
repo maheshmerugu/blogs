@@ -27,10 +27,7 @@
 
             </li>
 
-            <li class="<?php echo e(Request::is('admin/plan-subscriptions/lists*')?'active':''); ?>">
-                <a href="<?php echo e(route('admin.plans.list.view')); ?>"><i class="fa fa-question-circle"></i> <span class="nav-label">plans</span>
-                </a>
-            </li> 
+            
           
             <li class="<?php echo e(Request::is('admin/blogs/list*')?'active':''); ?>">
                 <a href="<?php echo e(route('admin.blogs.list.view')); ?>"><i class="fa fa-question-circle"></i> <span class="nav-label">Blogs</span>

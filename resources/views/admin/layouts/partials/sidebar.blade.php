@@ -27,10 +27,10 @@
 
             </li>
 
-            <li class="{{Request::is('admin/plan-subscriptions/lists*')?'active':''}}">
+            {{-- <li class="{{Request::is('admin/plan-subscriptions/lists*')?'active':''}}">
                 <a href="{{ route('admin.plans.list.view') }}"><i class="fa fa-question-circle"></i> <span class="nav-label">plans</span>
                 </a>
-            </li> 
+            </li>  --}}
           
             <li class="{{Request::is('admin/blogs/list*')?'active':''}}">
                 <a href="{{ route('admin.blogs.list.view') }}"><i class="fa fa-question-circle"></i> <span class="nav-label">Blogs</span>

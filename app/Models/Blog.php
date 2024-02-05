@@ -10,11 +10,11 @@ class Blog extends Model
 
     public function categories()
     {
-<<<<<<< HEAD
-        // return $this->belongsToMany(Category::class, 'blog_category', 'blog_id', 'category_id')->withTimestamps();
-=======
         return $this->belongsToMany(Category::class, 'blog_category', 'blog_id', 'category_id')->withTimestamps();
->>>>>>> origin/venkatesh
+    }
+    public function blog_category()
+    {
+        return $this->belongsTo(BlogCategory::class, 'id', 'blog_id');
     }
 
     public function tags()
@@ -24,10 +24,10 @@ class Blog extends Model
 
     public function blogImages()
     {
-<<<<<<< HEAD
-        return $this->hasMany(BlogImage::class);
-=======
         return $this->hasMany(BlogImage::class, 'blog_id', 'id');
->>>>>>> origin/venkatesh
+    }
+    public function TagNames()
+    {
+        return $this->tags->pluck('name')->join(',');
     }
 }
