@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\Admin\CategoriesController;
+>>>>>>> origin/venkatesh
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PlanSubscriptionController;
 use Illuminate\Support\Facades\Artisan;
@@ -42,6 +46,7 @@ Route::group(['middleware' => 'admin_auth'], function () {
         }
     );
 
+<<<<<<< HEAD
     //Blogs management
     Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
         Route::get('/create', 'index')->name('admin.blogs.create');
@@ -50,6 +55,29 @@ Route::group(['middleware' => 'admin_auth'], function () {
         Route::get('/get-blog-lists', 'getBlogLists')->name('admin.blogs.list');
 
         // Route::get('/list', 'index')->name('admin.blogs.list');
+=======
+    // Categories Management
+    Route::controller(CategoriesController::class)->prefix('/categories')->group(function () {
+
+        Route::get('/create-category', 'index')->name('admin.categories.add');
+        Route::post('/create-category', 'create')->name('admin.categories.create');
+        Route::get('/lists', 'getCategoriesView')->name('admin.categories.list.view');
+        Route::get('/get-category-lists', 'getCategoriesList')->name('admin.categories.list');
+        Route::post('/delete-category', 'deleteCategory')->name('admin.delete.category');
+        Route::get('/category/detail/{category_id}', 'categoryDetail')->name('admin.category.detail');
+        Route::get('/edit/{category_id}', 'categoryEditView')->name('admin.category.edit');
+        Route::post('/category-update', 'updateCategory')->name('admin.category.update');
+
+    });
+
+    //Blogs management
+    Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
+
+        Route::get('/create', 'index')->name('admin.blogs.add');
+        Route::post('/create', 'create')->name('admin.blogs.create');
+        Route::get('/lists', 'getBlogView')->name('admin.blogs.list.view');
+        Route::get('/get-blog-lists', 'getBlogLists')->name('admin.blogs.get-list');
+>>>>>>> origin/venkatesh
         Route::get('/edit/{blog}', 'getEdit')->name('admin.blogs.edit');
         Route::post('/update/{blog}', 'postUpdate')->name('admin.blogs.update');
         Route::post('/delete-blog', 'deleteBlog')->name('admin.delete.blog');

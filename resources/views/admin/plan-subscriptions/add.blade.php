@@ -67,7 +67,7 @@
                             <div class="col-md-6" style="display: none"  id="watch_hours" >
                                 <div class="form-group">
                                     <label for="">Watch Hour</label>
-                                    <input name="watch_hours" class="form-control"  ></input>
+                                    <input name="watch_hours" class="form-control"  >
                                 </div>
                             </div>
                             <div class="col-md-6">

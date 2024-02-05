@@ -37,6 +37,11 @@
                 </a>
             </li> 
 
+            <li class="{{Request::is('admin/categories/list*')?'active':''}}">
+                <a href="{{ route('admin.categories.list.view') }}"><i class="fa fa-question-circle"></i> <span class="nav-label">Categories</span>
+                </a>
+            </li> 
+
         </ul>
 
     </div>

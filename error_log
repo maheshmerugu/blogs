@@ -1,0 +1,25 @@
+[24-Jul-2023 11:48:42 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 11:48:42 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 11:48:42 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 11:48:42 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 11:48:50 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 11:48:50 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 06:23:32 UTC] PHP Warning:  require(/home/e42hkfu2q4wn/public_html/auricle2.0/vendor/autoload.php): failed to open stream: No such file or directory in /home/e42hkfu2q4wn/public_html/auricle2.0/artisan on line 18
+[24-Jul-2023 06:23:32 UTC] PHP Fatal error:  require(): Failed opening required '/home/e42hkfu2q4wn/public_html/auricle2.0/vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/e42hkfu2q4wn/public_html/auricle2.0/artisan on line 18
+[24-Jul-2023 11:56:24 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 11:56:24 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 11:56:24 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 11:56:24 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 13:21:14 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 13:21:14 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 13:21:14 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 13:21:14 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[24-Jul-2023 13:21:30 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/e42hkfu2q4wn/public_html/auricle2.0/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Jul-2023 13:21:30 Asia/Kolkata] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-Aug-2023 08:33:15 UTC] PHP Notice:  Undefined variable: allowedIP in /home/e42hkfu2q4wn/public_html/auricle2.0/public/index.php on line 13
+[28-Nov-2023 14:13:05 Asia/Kolkata] PHP Fatal error:  Cannot declare class App\Http\Controllers\AssetLinksController, because the name is already in use in /home/e42hkfu2q4wn/public_html/dev.auricle.co.in/app/Http/Controllers/Api/AssetLinksController.php on line 0
+[11-Dec-2023 14:30:04 Asia/Kolkata] PHP Fatal error:  Cannot declare class SendMcqNotifications, because the name is already in use in /home/e42hkfu2q4wn/public_html/dev.auricle.co.in/app/Console/Commands/SendMcqNotifications.php on line 8
+[11-Dec-2023 14:31:15 Asia/Kolkata] PHP Fatal error:  Cannot declare class SendMcqNotifications, because the name is already in use in /home/e42hkfu2q4wn/public_html/dev.auricle.co.in/app/Console/Commands/SendMcqNotifications.php on line 8
+[20-Dec-2023 17:32:47 Asia/Kolkata] PHP Fatal error:  Cannot declare class App\Http\Controllers\Api\PlanSubscriptionController, because the name is already in use in /home/e42hkfu2q4wn/public_html/dev.auricle.co.in/app/Http/Controllers/Admin/PlanSubscriptionController.php on line 0
+[20-Dec-2023 17:34:10 Asia/Kolkata] PHP Fatal error:  Cannot declare class App\Http\Controllers\Api\PlanSubscriptionController, because the name is already in use in /home/e42hkfu2q4wn/public_html/dev.auricle.co.in/app/Http/Controllers/Admin/PlanSubscriptionController.php on line 0
+[26-Dec-2023 23:04:17 Asia/Kolkata] PHP Fatal error:  Cannot declare class SendMcqNotifications, because the name is already in use in /home/e42hkfu2q4wn/public_html/dev.auricle.co.in/app/Console/Commands/SendMcqNotifications.php on line 8
