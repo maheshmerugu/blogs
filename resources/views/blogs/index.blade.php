@@ -58,7 +58,7 @@
             </div>
 
             <div class="row mt-3">
-            @foreach($blog_posts as $post)
+            @foreach($blogs as $blog)
 
                 <div class="col-md-4 mb-3">
                     <div class="card cardBlog">
@@ -66,8 +66,8 @@
                         <div class="card-body">
 
                             <div class="cardText">
-                                <h3>{{$post->getTitleByCategoryId($post->category_id)}}</h3>
-                                <p> {{$post->getDescByCategoryId($post->category_id)}}</p>
+                                <h3>{{$blog->title ?? ''}}</h3>
+                                <p> {{strip_tags($blog->description ?? '')}}</p>
                                 <p class="bycandidate"> By <span> Rachael Estes </span> </p>
                                 <p class="mb-0"> January 2, 2024 </p>
                             </div>
@@ -119,7 +119,8 @@
 
                                     <div class="col-md-12">
                                         <div class="form-group mb-3 text-end">
-                                            <button class="btn btn-submit"> Submit </button>
+                                        <button class="btn btn-submit" type="button" onclick="submitForm()">Submit</button>
+
                                         </div>
                                     </div>
                                 </div>
@@ -135,5 +136,25 @@
         </div>
     </section>
 
+
+
+
+    <script>
+    function submitForm() {
+        $.ajax({
+            type: 'POST',
+            url: '/submit-form',
+            data: $('#myForm').serialize(),
+            success: function (data) {
+                console.log(data);
+                // Handle success response
+            },
+            error: function (error) {
+                console.log(error);
+                // Handle error response
+            }
+        });
+    }
+</script>
 
 @endsection 

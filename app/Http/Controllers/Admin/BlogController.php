@@ -17,8 +17,8 @@ class BlogController extends Controller
     public function index(Request $request){
 
         $categories=Category::all();
-        $blog_posts=BlogCategory::where('category_id',3)->get();
-        return view('blogs.index',compact('categories','blog_posts'));
+        $blogs=Blog::where('category_id',3)->get();
+        return view('blogs.index',compact('categories','blogs'));
     }
     public function fetchCategories()
     {

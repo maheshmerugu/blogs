@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\AssetLinksController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ArticleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +26,9 @@ Route::prefix('/admin')->group(base_path('routes/admin_route.php'));
 Route::get('/', [BlogController::class, 'index'])->name('admin.blogs.view');
 
 Route::get('/admin/blogs', [BlogController::class, 'getBlogView'])->name('admin.blogs.list.view');
+
+
+Route::post('/submit-form', [ArticleController::class, 'submitForm'])->name('article.submit');
 
 // Route::get('/delete-user', [UserController::class, 'deleteUserContent']);
 
