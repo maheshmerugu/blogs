@@ -2,10 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogController;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\Admin\CategoriesController;
->>>>>>> origin/venkatesh
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PlanSubscriptionController;
 use Illuminate\Support\Facades\Artisan;
@@ -46,16 +43,6 @@ Route::group(['middleware' => 'admin_auth'], function () {
         }
     );
 
-<<<<<<< HEAD
-    //Blogs management
-    Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
-        Route::get('/create', 'index')->name('admin.blogs.create');
-        Route::post('/create', 'create')->name('admin.blogs.store');
-        Route::get('/lists', 'getBlogView')->name('admin.blogs.list.view');
-        Route::get('/get-blog-lists', 'getBlogLists')->name('admin.blogs.list');
-
-        // Route::get('/list', 'index')->name('admin.blogs.list');
-=======
     // Categories Management
     Route::controller(CategoriesController::class)->prefix('/categories')->group(function () {
 
@@ -77,7 +64,6 @@ Route::group(['middleware' => 'admin_auth'], function () {
         Route::post('/create', 'create')->name('admin.blogs.create');
         Route::get('/lists', 'getBlogView')->name('admin.blogs.list.view');
         Route::get('/get-blog-lists', 'getBlogLists')->name('admin.blogs.get-list');
->>>>>>> origin/venkatesh
         Route::get('/edit/{blog}', 'getEdit')->name('admin.blogs.edit');
         Route::post('/update/{blog}', 'postUpdate')->name('admin.blogs.update');
         Route::post('/delete-blog', 'deleteBlog')->name('admin.delete.blog');
