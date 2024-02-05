@@ -58,16 +58,18 @@ Route::group(['middleware' => 'admin_auth'], function () {
     });
 
     //Blogs management
-    Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
+    Route::controller(BlogController::class)->group(function () {
 
-        Route::get('/create', 'index')->name('admin.blogs.add');
-        Route::post('/create', 'create')->name('admin.blogs.create');
-        Route::get('/lists', 'getBlogView')->name('admin.blogs.list.view');
-        Route::get('/get-blog-lists', 'getBlogLists')->name('admin.blogs.get-list');
-        Route::get('/edit/{blog}', 'getEdit')->name('admin.blogs.edit');
-        Route::post('/update/{blog}', 'postUpdate')->name('admin.blogs.update');
-        Route::post('/delete-blog', 'deleteBlog')->name('admin.delete.blog');
-        Route::get('/detail/{blog}', 'getShow')->name('admin.blogs.detail');
+        Route::prefix('blogs')->group(function () {
+            Route::get('/create', 'index')->name('admin.blogs.add');
+            Route::post('/create', 'create')->name('admin.blogs.create');
+
+            Route::get('/get-blog-lists', 'getBlogLists')->name('admin.blogs.get-list');
+            Route::get('/edit/{blog}', 'getEdit')->name('admin.blogs.edit');
+            Route::post('/update/{blog}', 'postUpdate')->name('admin.blogs.update');
+            Route::post('/delete-blog', 'deleteBlog')->name('admin.delete.blog');
+            Route::get('/detail/{blog}', 'getShow')->name('admin.blogs.detail');
+        });
     });
 
 });

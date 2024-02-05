@@ -21,21 +21,24 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Create Blog</h4>
-                                    <form id="create-blog" method="POST" action="{{ route('admin.blogs.create') }}" enctype="multipart/form-data">
+                                    <form id="blog-submit" method="POST" action="{{ route('admin.blogs.create') }}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
+
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
                                                     <label for="title">Title</label>
                                                     <input type="text" name="title" class="form-control" id="title" required>
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
                                                     <label for="description">Description</label>
                                                     <textarea name="description" id="description" class="form-control" rows="5"></textarea>
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
                                                     <label for="categories">Categories</label>
@@ -50,12 +53,14 @@
                                                     @enderror
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
                                                     <label for="tags">Tags</label>
                                                     <input type="text" name="tags" class="form-control" id="tags" placeholder="e.g., 'Tag1,Tag2'">
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
                                                     <label for="images">Images</label>
@@ -65,6 +70,7 @@
                                             <div class="col-md-12 mt-3 text-center">
                                                 <button class="btn btn-md btn-primary" type="submit" id="submitButton">Submit</button>
                                             </div>
+                                            
                                             <div class="col-md-12 errorMsg"></div>
                                         </div>
                                     </form>
@@ -94,10 +100,10 @@
     // Initialize select2 on the tags input field
     $('#tags').select2({
         tags: true,
-        tokenSeparators: [',', ' '], // Define separators for multiple tags
+        tokenSeparators: [', ', ' '], // Define separators for multiple tags
     });
 
-    $('#create-blog').on('submit', function(e){
+    $('#blog-submit').on('submit', function(e){
         e.preventDefault();
 
         // Destroy TinyMCE instance before submitting the form

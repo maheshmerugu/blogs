@@ -12,6 +12,10 @@ class Blog extends Model
     {
         return $this->belongsToMany(Category::class, 'blog_category', 'blog_id', 'category_id')->withTimestamps();
     }
+    public function blog_category()
+    {
+        return $this->belongsTo(BlogCategory::class, 'id', 'blog_id');
+    }
 
     public function tags()
     {
@@ -21,5 +25,9 @@ class Blog extends Model
     public function blogImages()
     {
         return $this->hasMany(BlogImage::class, 'blog_id', 'id');
+    }
+    public function TagNames()
+    {
+        return $this->tags->pluck('name')->join(',');
     }
 }

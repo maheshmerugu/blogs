@@ -13,61 +13,59 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h3><a href="{{ route('admin.blogs.list.view') }}"> Blog List </a>/ Add Blog</h3>
+                <h3>Edit Blog</h3>
             </div>
             <div class="ibox-content">
                 <div class="row">
                     <div class="offset-md-2 col-md-8">
                         <div class="card">
                             <div class="card-body">
-                                <h4>Create Blog</h4>
-                                <form action="{{ route('admin.blogs.create') }}" method="POST" enctype="multipart/form-data" id="create-blog">
+                                <h4>Edit Blog</h4>
+                                <form action="{{ route('admin.blogs.update', ['blog' => $blog->id]) }}" method="POST" enctype="multipart/form-data" id="edit-blog">
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-12 mt-3">
                                             <div class="form-group">
                                                 <label for="title">Title</label>
-                                                <input type="text" name="title" class="form-control" id="title" required>
+                                                <input type="text" name="title" class="form-control" id="title" value="{{ $blog->title }}" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mt-3">
                                             <div class="form-group">
                                                 <label for="description">Description</label>
-                                                <textarea name="description" id="description" class="form-control" rows="5"></textarea>
+                                                <textarea name="description" id="description" class="form-control" rows="5">{{ $blog->description }}</textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mt-3">
                                             <div class="form-group">
-                                                <label for="categories">Categories</label>
-                                                <select name="categories[]" class="form-control" multiple>
+                                                <label for="category">Category</label>
+                                                <select name="category" class="form-control">
                                                     @foreach($categories as $category)
-                                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                        <option value="{{ $category->id }}" {{ $blog->blog_category->category->id == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                                                     @endforeach
                                                 </select>
-                                                @error('categories')
+                                                @error('category')
                                                     <div class="text-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
                                         </div>
+                                        
                                         <div class="col-md-12 mt-3">
                                             <div class="form-group">
                                                 <label for="tags">Tags</label>
-                                                <select name="tags[]" class="form-control" multiple>
-                                                    <!-- You may preload existing tags here if needed -->
-                                                </select>
-                                                @error('tags')
-                                                    <div class="text-danger">{{ $message }}</div>
-                                                @enderror
+                                                <input type="text" name="tags" class="form-control" id="tags" value="{{ implode(',', $blog->tags->pluck('name')->toArray()) }}" placeholder="e.g., 'Tag1,Tag2'">
                                             </div>
                                         </div>
+
                                         <div class="col-md-12 mt-3">
                                             <div class="form-group">
                                                 <label for="images">Images</label>
                                                 <input type="file" name="images[]" class="form-control" id="images" multiple>
                                             </div>
                                         </div>
+                                        
                                         <div class="col-md-12 mt-3 text-center">
-                                            <button class="btn btn-md btn-primary" type="submit" id="submitButton">Submit</button>
+                                            <button class="btn btn-md btn-primary" type="submit" id="submitButton">Update</button>
                                         </div>
                                         <div class="col-md-12 errorMsg"></div>
                                     </div>
@@ -100,10 +98,10 @@
         // Initialize select2 for tags
         $('select[name="tags\[\]"]').select2({
             tags: true,
-            tokenSeparators: [',', ' '],
+            tokenSeparators: [', ', ' '],
         });
 
-        $('#create-blog').on('submit', function(e){
+        $('#edit-blog').on('submit', function(e){
             e.preventDefault();
 
             // Destroy TinyMCE instance before submitting the form
@@ -114,8 +112,8 @@
             $(".loader").show();
 
             $.ajax({
-                url: "{{ route('admin.blogs.create') }}",
-                type: 'POST',
+                url: $(this).attr('action'), 
+                type: 'POST', 
                 dataType: 'json',
                 data: fd,
                 contentType: false,

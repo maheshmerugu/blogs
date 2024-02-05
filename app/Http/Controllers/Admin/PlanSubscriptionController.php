@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\PlanSubscription;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class PlanSubscriptionController extends Controller
@@ -17,7 +18,8 @@ class PlanSubscriptionController extends Controller
     //Plan List AJAX
     public function getPlanLists(Request $request)
     {
-        //  dd($request);
+        Log::info('Blog Lists Request Data: ' . json_encode($request->all()));
+
         if (isset($_GET['search']['value'])) {
             $search = $_GET['search']['value'];
         } else {
