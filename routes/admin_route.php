@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 //Admin Route
-Route::get('/', function () {return redirect()->route('admin.login.view');});
+Route::any('/', function () {return redirect()->route('admin.login.view');});
 Route::controller(AuthController::class)->group(function () {
 
     Route::get('/login', 'index')->name('admin.login.view');
@@ -60,7 +60,7 @@ Route::group(['middleware' => 'admin_auth'], function () {
     //Blogs management
     Route::controller(BlogController::class)->group(function () {
 
-        Route::prefix('blogs')->group(function () {
+        Route::prefix('blogscontroller')->group(function () {
             Route::get('/create', 'index')->name('admin.blogs.add');
             Route::post('/create', 'create')->name('admin.blogs.create');
 

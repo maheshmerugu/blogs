@@ -21,7 +21,9 @@ return view('welcome');
 });*/
 
 Route::prefix('/admin')->group(base_path('routes/admin_route.php'));
-Route::get('/', [BlogController::class, 'getBlogView'])->name('admin.blogs.list.view');
+Route::get('/', [BlogController::class, 'index'])->name('admin.blogs.view');
+
+Route::get('/admin/blogs', [BlogController::class, 'getBlogView'])->name('admin.blogs.list.view');
 
 // Route::get('/delete-user', [UserController::class, 'deleteUserContent']);
 

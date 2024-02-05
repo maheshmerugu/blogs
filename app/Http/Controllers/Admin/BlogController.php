@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Category;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -12,6 +13,13 @@ use Illuminate\Support\Facades\Validator;
 
 class BlogController extends Controller
 {
+
+    public function index(Request $request){
+
+        $categories=Category::all();
+        $blog_posts=BlogCategory::where('category_id',3)->get();
+        return view('blogs.index',compact('categories','blog_posts'));
+    }
     public function fetchCategories()
     {
         $categories = Category::all();
@@ -70,12 +78,12 @@ class BlogController extends Controller
         return response()->json($records);
     }
 
-    public function index()
-    {
-        $categories = Category::all(); // Fetch all categories
+    // public function index()
+    // {
+    //     $categories = Category::all(); // Fetch all categories
 
-        return view('admin.blogs.add', compact('categories'));
-    }
+    //     return view('admin.blogs.add', compact('categories'));
+    // }
 
     public function create(Request $request)
     {
