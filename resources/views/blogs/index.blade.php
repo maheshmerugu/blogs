@@ -85,35 +85,37 @@
         <div class="container">
             <h2>Post your Article</h2>
             <div class="card articleForm">
+                <form id="myForm">
                 <div class="card-body">
                     <div class="row align-items-end">
                         <div class="col-md-8">
-                            <form>
+                            <form method="post">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder=" Full Name" class="form-control">
+                                            <input type="text" name="name" placeholder=" Full Name" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder=" Email ID" class="form-control">
+                                            <input type="text" name="email" placeholder=" Email ID" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group mb-3">
-                                            <input type="text" placeholder=" Phone Number" class="form-control">
+                                            <input type="text" name="phone" placeholder=" Phone Number" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" placeholder=" Location" class="form-control">
+                                            <input type="text" name="location" placeholder=" Location" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group mb-3">
-                                            <textarea cols="" rows="4" placeholder="Your article..." class="form-control"></textarea>
+                                            <textarea cols="" rows="4" name="article"  placeholder="Your article..." class="form-control"></textarea>
                                         </div>
                                     </div>
 
@@ -132,6 +134,9 @@
                         </div>
                     </div>
                 </div>
+
+                </form>
+               
             </div>
         </div>
     </section>
@@ -143,18 +148,30 @@
     function submitForm() {
         $.ajax({
             type: 'POST',
-            url: '/submit-form',
-            data: $('#myForm').serialize(),
+            url: '{{ route("article.submit") }}', // Use the route helper to generate the URL
+            data: $('#myForm').serialize() + "&_token={{ csrf_token() }}", // Include CSRF token
             success: function (data) {
                 console.log(data);
+                toastr.success(data.message);
+                $('#myForm')[0].reset(); // Reset the form using JavaScript
                 // Handle success response
             },
             error: function (error) {
                 console.log(error);
                 // Handle error response
+                if (error.responseJSON && error.responseJSON.errors) {
+                    // Loop through the errors and display each one using Toastr
+                    $.each(error.responseJSON.errors, function (key, value) {
+                        toastr.error(value);
+                    });
+                } else {
+                    // Display a generic error message if no specific error messages are returned
+                    toastr.error('An error occurred while submitting the form');
+                }
             }
         });
     }
 </script>
+
 
 @endsection 
