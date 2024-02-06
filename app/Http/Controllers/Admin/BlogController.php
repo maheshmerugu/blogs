@@ -49,13 +49,15 @@ class BlogController extends Controller
         foreach ($blogs as $key => $blog) {
             $categories = $blog->categories->pluck('name')->toArray();
             $tags = $blog->tags->pluck('name')->toArray();
-            $images = $blog->blogImages->pluck('image_path')->toArray();
-
+            $images = [];
+            foreach ($blog->blogImages as $image) {
+                $images[] = $image->getImageUrl();
+            }
             $data[] = [
                 'id' => $blog->id,
                 'title' => $blog->title,
                 'description' => $blog->description,
-                'categories' => $categories,
+                'category' => $blog->category->name,
                 'tags' => $tags,
                 'images' => $images,
                 'action' => '<a href="javascript::void(0)" class="deleteBlog" data-id="' . $blog->id . '"><i class="fa fa-trash text-danger"></i></a> | <button class="editBlog" data-id="' . $blog->id . '"><i class="fa fa-edit"></i></button>',
@@ -107,7 +109,9 @@ class BlogController extends Controller
             $insert = $blog->save();
 
             $categoryId = $request->input('category');
-            $blog->categories()->attach($categoryId);
+            $blog->category_id = $categoryId;
+
+            $blog->save();
 
             if ($request->has('tags')) {
                 $tagNames = explode(',', $request->input('tags'));
@@ -122,17 +126,23 @@ class BlogController extends Controller
             }
 
             if ($request->hasFile('images')) {
-                foreach ($request->file('images') as $image) {
-                    $filename = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
-                    $path = $image->storeAs('public/images/blogs', $filename);
-                    $blog->blogImages()->create(['image_path' => $path]);
+                foreach ($request->file('images') as $key => $image) {
+                    $filename = time() . '_' . uniqid() . '_' . $key . '.' . $image->getClientOriginalExtension();
+                    $path = $image->storeAs('public/blog_images', $filename);
+                    $blog->blogImages()->create(['image_path' => 'blog_images/' . $filename]);
                 }
             }
 
             if ($insert) {
-                return $this->sendWebResponse(true, "Blog created successfully");
+                return redirect()->route('admin.blogs.list.view')->with([
+                    'status' => true,
+                    'message' => 'Blog created successfully',
+                ]);
             } else {
-                return $this->sendWebResponse(false, "Something went wrong, please try again");
+                return redirect()->route('admin.blogs.add')->with([
+                    'status' => false,
+                    'message' => 'Something went wrong, please try again',
+                ]);
             }
         } catch (Exception $ex) {
             Log::error($ex);
@@ -163,11 +173,12 @@ class BlogController extends Controller
         // Update blog data
         $blog->title = $request->input('title');
         $blog->description = $request->input('description');
-        $blog->save();
 
         // Update category
         $categoryId = $request->input('category');
-        $blog->categories()->sync([$categoryId]);
+        $blog->category_id = $categoryId;
+
+        $blog->save();
 
         // Update tags
         if ($request->filled('tags')) {
@@ -187,69 +198,19 @@ class BlogController extends Controller
             $uploadedImages = [];
 
             foreach ($request->file('images') as $image) {
-                $path = $image->store('blog_images', 'public');
-                $uploadedImages[] = ['path' => $path];
+                $filename = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $path = $image->storeAs('public/blog_images', $filename);
+                $uploadedImages[] = ['image_path' => 'blog_images/' . $filename];
             }
 
             $blog->blogImages()->createMany($uploadedImages);
         }
 
-        return response()->json(['status' => true, 'message' => 'Blog updated successfully']);
+        return redirect()->route('admin.blogs.list.view')->with([
+            'status' => true,
+            'message' => 'Blog updated successfully',
+        ]);
     }
-
-    // private function handleExistingTags(Request $request, Blog $blog)
-    // {
-    //     // Detach old tags and attach new tags
-    //     $blog->tags()->detach();
-
-    //     // Handle existing tags
-    //     if ($request->has('tags')) {
-    //         $tagIds = $request->input('tags');
-    //         $blog->tags()->attach($tagIds);
-    //     }
-    // }
-
-    // private function handleNewTags(Request $request, Blog $blog)
-    // {
-    //     // Handle new tags
-    //     if ($request->has('new_tags')) {
-    //         $newTagNames = explode(', ', $request->input('new_tags'));
-    //         $newTagIds = [];
-
-    //         foreach ($newTagNames as $tagName) {
-    //             // Trim tag name
-    //             $tagName = trim($tagName);
-
-    //             // Find the tag by name
-    //             $tag = Tag::firstOrNew(['name' => $tagName]);
-
-    //             // Check if the tag already exists
-    //             if (!$tag->exists) {
-    //                 // If the tag is new, save it
-    //                 $tag->save();
-    //             }
-
-    //             // Add the tag ID to the array
-    //             $newTagIds[] = $tag->id;
-    //         }
-
-    //         // Attach new tags to the blog
-    //         $blog->tags()->attach($newTagIds);
-    //     }
-    // }
-
-    // private function handleNewImages(Request $request, Blog $blog)
-    // {
-    //     // Handle new images
-    //     $images = $request->file('images');
-
-    //     foreach ($images as $image) {
-    //         $filename = $image->store('your_images_directory', 'public');
-
-    //         // Create a new Image model instance and associate it with the blog
-    //         $blog->images()->create(['filename' => $filename]);
-    //     }
-    // }
 
     public function deleteBlog(Request $request)
     {
@@ -258,6 +219,7 @@ class BlogController extends Controller
 
             $blog = Blog::findOrFail($blogId);
 
+            // Detach categories and tags
             $blog->categories()->detach();
             $blog->tags()->detach();
 

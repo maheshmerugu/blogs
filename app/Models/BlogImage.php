@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
 class BlogImage extends Model
 {
@@ -13,8 +12,8 @@ class BlogImage extends Model
     {
         return $this->belongsTo(Blog::class);
     }
-    public function getImage()
+    public function getImageUrl()
     {
-        return Storage::url($this->image_path);
+        return asset('storage/' . $this->image_path);
     }
 }

@@ -6,15 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['title', 'description', 'category_id'];
 
-    public function categories()
+    public function category()
     {
-        return $this->belongsToMany(Category::class, 'blog_category', 'blog_id', 'category_id')->withTimestamps();
-    }
-    public function blog_category()
-    {
-        return $this->belongsTo(BlogCategory::class, 'id', 'blog_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function tags()

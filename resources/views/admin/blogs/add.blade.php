@@ -41,7 +41,7 @@
 
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
-                                                    <label for="categories">Categories</label>
+                                                    <label for="category">Category</label>
                                                     <select name="category" class="form-control">
                                                         <option value="" selected disabled>Select a category</option>
                                                         @foreach($categories as $category)
@@ -70,7 +70,7 @@
                                             <div class="col-md-12 mt-3 text-center">
                                                 <button class="btn btn-md btn-primary" type="submit" id="submitButton">Submit</button>
                                             </div>
-                                            
+
                                             <div class="col-md-12 errorMsg"></div>
                                         </div>
                                     </form>

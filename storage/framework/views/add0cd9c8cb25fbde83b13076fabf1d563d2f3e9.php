@@ -41,7 +41,7 @@
 
                                             <div class="col-md-12 mt-3">
                                                 <div class="form-group">
-                                                    <label for="categories">Categories</label>
+                                                    <label for="category">Category</label>
                                                     <select name="category" class="form-control">
                                                         <option value="" selected disabled>Select a category</option>
                                                         <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -77,7 +77,7 @@ unset($__errorArgs, $__bag); ?>
                                             <div class="col-md-12 mt-3 text-center">
                                                 <button class="btn btn-md btn-primary" type="submit" id="submitButton">Submit</button>
                                             </div>
-                                            
+
                                             <div class="col-md-12 errorMsg"></div>
                                         </div>
                                     </form>
