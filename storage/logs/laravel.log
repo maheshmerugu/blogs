@@ -12284,3 +12284,6 @@ ms
 [2024-02-06 13:45:40] local.INFO: API Request: POST http://localhost/blogs/submit-form executed in 21.5 ms  
 [2024-02-06 13:50:09] local.INFO: API Request: GET http://localhost/blogs executed in 92.84 ms  
 [2024-02-06 14:08:13] local.INFO: API Request: GET http://localhost/blogs executed in 101.16 ms  
+[2024-02-07 08:55:36] local.INFO: API Request: GET http://localhost/blogs/patient-blog.html executed in 251.15 ms  
+[2024-02-07 09:03:04] local.INFO: API Request: GET http://localhost/blogs executed in 90.24 ms  
+[2024-02-07 09:03:05] local.INFO: API Request: GET http://localhost/blogs executed in 44.11 ms  
