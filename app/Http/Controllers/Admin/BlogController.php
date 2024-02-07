@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Category;
+use App\Models\PatientExperts;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -16,9 +17,28 @@ class BlogController extends Controller
 
     public function index(Request $request){
 
-        $categories=Category::all();
+        $patient_experts=PatientExperts::all();
         $blogs=Blog::where('category_id',3)->get();
-        return view('blogs.index',compact('categories','blogs'));
+        return view('blogs.index',compact('patient_experts','blogs'));
+    }
+
+    public function  PatientBlogView($id){
+        $blogs=Blog::where('category_id',3)->get();
+
+        $patient_blog=PatientExperts::where('id',$id)->first();
+
+        return view('blogs.patient_view_blog',compact('blogs','patient_blog'));
+    }
+
+    public function blogView(){
+        $blogs=Blog::where('category_id',3)->first();
+        return view('blogs.view_blog',compact('blogs'));
+    }
+
+    public function allPatientExpertsView(){
+        $all_patient_experts=PatientExperts::all();
+
+        return view('blogs.all-patient-experts',compact('all_patient_experts'));
     }
     public function fetchCategories()
     {
