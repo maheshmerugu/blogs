@@ -17,19 +17,15 @@
                  <td>{{$key+1}}</td>
                  <td>{{$val->title}}</td>   
                   <td>{{$val->description}}</td>   
-                  <td>{{ optional($val->category)->name }}</td> 
+                 <td>{{$val->blog_category->category->name}}</td>   
                  <td>
                     {{$val->TagNames()}}
                  </td>
                  <td>
-                    @if (count($val->blogImages) > 0)
-                        @foreach($val->blogImages as $image)
-                            <img src="{{ $image->getImageUrl() }}" style="max-height: 25px">
-                        @endforeach
-                    @else
-                        No Image
-                    @endif
-                </td>
+                    @if (count($val->blogImages))
+                        <img src="{{$val->blogImages[0]->getImage()}}" style="max-height: 25px">
+                    @endif    
+                </td> 
                 <td>
                   <div class="d-flex justify-content-between">
                       <div>
