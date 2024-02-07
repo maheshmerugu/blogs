@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2024-02-03 17:45:51] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/lists executed in 549.13 ms  
 [2024-02-03 17:45:53] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/img/a4.jpg executed in 518.2 ms  
 [2024-02-03 17:45:53] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/img/profile.jpg executed in 531.32 ms  
@@ -15689,3 +15690,47 @@ ms
 [2024-02-07 12:17:22] local.INFO: API Request: GET http://localhost/blogs/patient-blog-view/images/thumbnail.webp executed in 27.08 ms  
 [2024-02-07 12:17:22] local.INFO: API Request: GET http://localhost/blogs/patient-blog-view/images/imggoogle.png executed in 35.59 ms  
 [2024-02-07 12:17:22] local.INFO: API Request: GET http://localhost/blogs/patient-blog-view/images/imgApple.png executed in 35.74 ms  
+=======
+[2024-02-05 18:23:26] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/edit/55 executed in 245.28 ms  
+[2024-02-05 18:23:27] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/edit/img/a4.jpg executed in 564.74 ms  
+[2024-02-05 18:23:27] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/edit/img/profile.jpg executed in 603.31 ms  
+[2024-02-05 18:23:28] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 52.18 ms  
+[2024-02-05 18:23:42] local.INFO: API Request: POST http://localhost/blogs/admin/blogs/update/55 executed in 189.13 ms  
+[2024-02-05 18:23:42] local.INFO: API Request: GET http://localhost/blogs executed in 185.29 ms  
+[2024-02-05 18:23:43] local.INFO: API Request: GET http://localhost/blogs/storage/blog_images/1707136763_65c0d6fb4e22e_0.png executed in 93.56 ms  
+[2024-02-05 18:23:43] local.INFO: API Request: GET http://localhost/blogs/img/profile.jpg executed in 102.24 ms  
+[2024-02-05 18:23:43] local.INFO: API Request: GET http://localhost/blogs/img/a4.jpg executed in 110.96 ms  
+[2024-02-05 18:23:44] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 61.1 ms  
+[2024-02-05 18:24:07] local.INFO: API Request: GET http://localhost/blogs/admin/categories/lists executed in 162.69 ms  
+[2024-02-05 18:24:08] local.INFO: API Request: GET http://localhost/blogs/admin/categories/img/profile.jpg executed in 84.25 ms  
+[2024-02-05 18:24:08] local.INFO: API Request: GET http://localhost/blogs/admin/categories/img/a4.jpg executed in 124.92 ms  
+[2024-02-05 18:24:09] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 138.71 ms  
+[2024-02-05 18:24:09] local.INFO: API Request: GET http://localhost/blogs/admin/js/plugins/dataTables/pdfmake.min.js.map executed in 104.58 ms  
+[2024-02-05 18:24:09] local.INFO: API Request: GET http://localhost/blogs/admin/categories/get-category-lists?_=1707137648322&columns%5B0%5D%5Bdata%5D=0&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=false&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=1&columns%5B1%5D%5Bname%5D=name&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=2&columns%5B2%5D%5Bname%5D=action&columns%5B2%5D%5Bsearchable%5D=false&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&draw=1&length=25&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&search%5Bvalue%5D=&search%5Bregex%5D=false&start=0 executed in 154.89 ms  
+[2024-02-05 18:24:12] local.INFO: API Request: GET http://localhost/blogs/admin/categories/create-category executed in 146.43 ms  
+[2024-02-05 18:24:13] local.INFO: API Request: GET http://localhost/blogs/admin/categories/img/profile.jpg executed in 99.84 ms  
+[2024-02-05 18:24:13] local.INFO: API Request: GET http://localhost/blogs/admin/categories/img/a4.jpg executed in 118.42 ms  
+[2024-02-05 18:24:13] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 65.85 ms  
+[2024-02-05 18:24:23] local.INFO: API Request: POST http://localhost/blogs/admin/categories/create-category executed in 119.97 ms  
+[2024-02-05 18:24:24] local.INFO: API Request: GET http://localhost/blogs/admin/categories/lists executed in 96.61 ms  
+[2024-02-05 18:24:25] local.INFO: API Request: GET http://localhost/blogs/admin/categories/img/a4.jpg executed in 186.79 ms  
+[2024-02-05 18:24:25] local.INFO: API Request: GET http://localhost/blogs/admin/categories/img/profile.jpg executed in 223.89 ms  
+[2024-02-05 18:24:25] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 116.5 ms  
+[2024-02-05 18:24:26] local.INFO: API Request: GET http://localhost/blogs/admin/categories/get-category-lists?_=1707137664961&columns%5B0%5D%5Bdata%5D=0&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=false&columns%5B0%5D%5Borderable%5D=false&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=1&columns%5B1%5D%5Bname%5D=name&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=2&columns%5B2%5D%5Bname%5D=action&columns%5B2%5D%5Bsearchable%5D=false&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&draw=1&length=25&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&search%5Bvalue%5D=&search%5Bregex%5D=false&start=0 executed in 127.4 ms  
+[2024-02-05 18:24:26] local.INFO: API Request: GET http://localhost/blogs/admin/js/plugins/dataTables/pdfmake.min.js.map executed in 118.03 ms  
+[2024-02-05 18:30:14] local.INFO: API Request: GET http://localhost/blogs executed in 301.79 ms  
+[2024-02-05 18:30:15] local.INFO: API Request: GET http://localhost/blogs/storage/blog_images/1707136763_65c0d6fb4e22e_0.png executed in 119.65 ms  
+[2024-02-05 18:30:15] local.INFO: API Request: GET http://localhost/blogs/img/a4.jpg executed in 137.67 ms  
+[2024-02-05 18:30:15] local.INFO: API Request: GET http://localhost/blogs/img/profile.jpg executed in 123.86 ms  
+[2024-02-05 18:30:16] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 58 ms  
+[2024-02-05 18:30:17] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/edit/55 executed in 158.79 ms  
+[2024-02-05 18:30:18] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/edit/img/profile.jpg executed in 66.63 ms  
+[2024-02-05 18:30:18] local.INFO: API Request: GET http://localhost/blogs/admin/blogs/edit/img/a4.jpg executed in 73.13 ms  
+[2024-02-05 18:30:18] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 108.82 ms  
+[2024-02-05 18:30:24] local.INFO: API Request: POST http://localhost/blogs/admin/blogs/update/55 executed in 137.02 ms  
+[2024-02-05 18:30:24] local.INFO: API Request: GET http://localhost/blogs executed in 142.5 ms  
+[2024-02-05 18:30:25] local.INFO: API Request: GET http://localhost/blogs/img/a4.jpg executed in 111.57 ms  
+[2024-02-05 18:30:25] local.INFO: API Request: GET http://localhost/blogs/img/profile.jpg executed in 157.05 ms  
+[2024-02-05 18:30:25] local.INFO: API Request: GET http://localhost/blogs/storage/blog_images/1707136763_65c0d6fb4e22e_0.png executed in 204.58 ms  
+[2024-02-05 18:30:26] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 73.71 ms  
+>>>>>>> origin/venkatesh

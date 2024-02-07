@@ -12,7 +12,7 @@ class Blogs extends Component
     protected $paginationTheme = 'bootstrap';
     public function render()
     {
-        $query = Blog::with(['blog_category.category', 'tags', 'blogImages']);
+        $query = Blog::with(['category', 'tags', 'blogImages']);
         return view('livewire.admin.blogs', [
             'blogs' => $query->latest()->paginate(10),
         ]);

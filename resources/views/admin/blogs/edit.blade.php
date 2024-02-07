@@ -41,7 +41,9 @@
                                                 <label for="category">Category</label>
                                                 <select name="category" class="form-control">
                                                     @foreach($categories as $category)
-                                                        <option value="{{ $category->id }}" {{ $blog->blog_category->category->id == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                                        <option value="{{ $category->id }}" {{ $blog->category->id == $category->id ? 'selected' : '' }}>
+                                                            {{ $category->name }}
+                                                        </option>
                                                     @endforeach
                                                 </select>
                                                 @error('category')
@@ -49,6 +51,7 @@
                                                 @enderror
                                             </div>
                                         </div>
+                                        
                                         
                                         <div class="col-md-12 mt-3">
                                             <div class="form-group">
