@@ -12288,6 +12288,7 @@ ms
 [2024-02-07 08:55:36] local.INFO: API Request: GET http://localhost/blogs/patient-blog.html executed in 251.15 ms  
 [2024-02-07 09:03:04] local.INFO: API Request: GET http://localhost/blogs executed in 90.24 ms  
 [2024-02-07 09:03:05] local.INFO: API Request: GET http://localhost/blogs executed in 44.11 ms  
+<<<<<<< HEAD
 [2024-02-07 09:44:27] local.INFO: API Request: GET http://localhost/blogs executed in 2717.36 ms  
 [2024-02-07 09:51:36] local.INFO: API Request: GET http://localhost/blogs executed in 77.65 ms  
 [2024-02-07 09:51:38] local.INFO: API Request: GET http://localhost/blogs executed in 40.83 ms  
@@ -15734,3 +15735,5 @@ ms
 [2024-02-05 18:30:25] local.INFO: API Request: GET http://localhost/blogs/storage/blog_images/1707136763_65c0d6fb4e22e_0.png executed in 204.58 ms  
 [2024-02-05 18:30:26] local.INFO: API Request: GET http://localhost/blogs/admin/js/popper.min.js.map executed in 73.71 ms  
 >>>>>>> origin/venkatesh
+=======
+>>>>>>> parent of 007149bd (blogs viewing done without images)

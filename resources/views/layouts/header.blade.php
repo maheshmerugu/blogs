@@ -636,7 +636,7 @@
                         <span></span>
                         <span></span>
                         <ul id="menu">
-                            <a href="{{route('home')}}">
+                            <a href="#">
                                 <li>Home</li>
                             </a>
                             <a href="#">
@@ -657,9 +657,7 @@
             </div>
 
             <div class="col-md-4 text-center">
-
-                <img src="{{ asset('images/logo.png') }}" class="img-fluid">
-
+                <img src="images/logo.png" class="img-fluid">
 
             </div>
             <div class="col-md-4  text-end">
@@ -680,9 +678,7 @@
                     </div>
                 </div>
                 <div class="col-md-5" style="mix-blend-mode: multiply">
-
-
-                    <img src="{{ asset('images/blog-hero.png') }}"   class="img-fluid" alt="Auricle Blog" />
+                    <img src="images/blog-hero.png" class="img-fluid" alt="Auricle Blog" />
                 </div>
             </div>
         </div>

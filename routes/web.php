@@ -23,18 +23,7 @@ return view('welcome');
 });*/
 
 Route::prefix('/admin')->group(base_path('routes/admin_route.php'));
-Route::get('/', [BlogController::class, 'index'])->name('home');
-
-
-Route::get('/blog-view/{id}', [BlogController::class, 'blogView'])->name('blog.view');
-
-
-
-Route::get('/all-patient-experts', [BlogController::class, 'allPatientExpertsView'])->name('allpatientexperts.view');
-
-
-Route::get('/patient-blog-view/{id}', [BlogController::class, 'PatientBlogView'])->name('patientblog.view');
-
+Route::get('/', [BlogController::class, 'index'])->name('admin.blogs.view');
 
 Route::get('/all-categories', [BlogController::class, 'index'])->name('admin.blogs.allcategories');
 

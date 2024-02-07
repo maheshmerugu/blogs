@@ -8,28 +8,28 @@
                     <h2>Featured Patient and Expert Contributors</h2>
                 </div>
                 <div class="Viewall">
-                    <a href="{{ route('allpatientexperts.view') }}" class="btn btn-success-outline">View All <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="patient-blog.html" class="btn btn-success-outline">View All <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
             <div class="variable-width">
 
-            @foreach($patient_experts as $expert)
+            @foreach($categories as $category)
                 <div class="carosel1">
                     <div class="imgperson">
                         <img src="images/categoryimg.png" class="img-fluid">
                     </div>
                     <div class="imgText">
                         <div class="category">
-                            <p class="username">{{$expert->expert_name}}</p>
-                            <p class="tag">{{$expert->getTitleByCategoryId($expert->category_id)}}</p>
+                            <p class="username">Zainab Alani</p>
+                            <p class="tag">{{$category->name ?? ''}}</p>
                         </div>
-                        <p class="diagnosed">{{$expert->diagnosizing_from}}</p>
+                        <p class="diagnosed">Diagnosed since 2019</p>
                         <p class="persondescri">Zainab Alani was diagnosed with generalized myasthenia gravis (MG)
                             at age 15. She had...
                         </p>
 
-                        <a href="{{ route('patientblog.view', ['id' => $expert->id]) }}" class="seemore">See More <i class="fa-solid fa-arrow-right"></i> </a>
+                        <p class="seemore">See More <i class="fa-solid fa-arrow-right"></i> </p>
                     </div>
                 </div>
 
@@ -50,20 +50,17 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="">
-                    <h2>Latest Patient Blog Posts</h2>
+                    <h2>Latest Food Blog Posts</h2>
                 </div>
-                <div class="Viewall"> 
-                    <a href="{{ route('allpatientexperts.view') }}" class="btn btn-light"><span>View All <i class="fa-solid fa-arrow-right"></i></span></a>
+                <div class="Viewall">
+                    <a href="" class="btn btn-light"><span>View All <i class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
             </div>
 
             <div class="row mt-3">
             @foreach($blogs as $blog)
 
-
                 <div class="col-md-4 mb-3">
-                    <a   href="{{ route('blog.view', ['id' => $expert->id]) }}">
-                        
                     <div class="card cardBlog">
                         <img src="images/blog1.png" class="img-fluid">
                         <div class="card-body">
@@ -76,7 +73,6 @@
                             </div>
                         </div>
                     </div>
-                    </a>
                 </div>
 
                 @endforeach
